@@ -98,7 +98,7 @@ if __name__ == '__main__':
 
     # notion相关配置
 
-    rss_movietracker = feedparser.parse(rss_address,
+    rss_movietracker = feedparser.parse(https://www.douban.com/feed/people/59941972/interests,
                                         request_headers=headers)
     print(rss_movietracker)
     # item = rss_movietracker["entries"][1]
