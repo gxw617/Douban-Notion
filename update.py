@@ -59,12 +59,10 @@ def film_info2(movie_url):
 
 
 def download_picture(url):
-    headers = {
-        "Host": "movie.douban.com",
-        "Referer": "https://movie.douban.com/top250?start=225&filter=",
-        "Upgrade-Insecure-Requests": "1",
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.69",
-    }
+    headers = {'User_Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:106.0) Gecko/20100101 Firefox/106.0',
+           'Cookie': 'talionnav_show_app="0"; bid=Cf71zChb_RQ; douban-fav-remind=1; ll="108242"; __gads=ID=0bafb4aeb143fe67-22ec8fe4afdd00e7:T=1682543567:RT=1682543567:S=ALNI_MbYOc1Iz2XRtqDuvMRIvG0ivsYWsQ; __gpi=UID=00000bf1637416d5:T=1682543567:RT=1682543567:S=ALNI_MaOhiuhuE9t248mVM_BfajI0RvLAw; viewed="26848581_36096690_35059158"; push_doumail_num=0; push_noty_num=0; __utmv=30149280.5994; _ga_RXNMP372GL=GS1.1.1701095081.2.1.1701095098.43.0.0; __utmc=30149280; dbcl2="59941972:/x0Ua+y4wtQ"; ck=Dqhb; ap_v=0,6.0; __utma=30149280.406879458.1699907638.1704150147.1704184051.14; __utmz=30149280.1704184051.14.11.utmcsr=movie.douban.com|utmccn=(referral)|utmcmd=referral|utmcct=/people/59941972/wish; __utmb=30149280.2.10.1704184051; frodotk="1d5b0e530a4af33358112af91ee0d999"; talionusr="eyJpZCI6ICI1OTk0MTk3MiIsICJuYW1lIjogIlx1OTRjM1x1OTRkYlx1ODJiMVx1NWYwMFx1NGU4NiJ9"; _ga_Y4GN1R87RG=GS1.1.1704185247.1.0.1704185247.0.0.0; _ga=GA1.2.406879458.1699907638; _gid=GA1.2.764250390.1704185248; Hm_lvt_6d4a8cfea88fa457c3127e14fb5fabc2=1704185248; Hm_lpvt_6d4a8cfea88fa457c3127e14fb5fabc2=1704185248',
+           'Host': 'www.douban.com',
+           'Referer': 'https://accounts.douban.com/'}
     # 获取网页的源代码
     r = requests.get(url, headers=headers)
     # 利用BeautifulSoup将获取到的文本解析成HTML
