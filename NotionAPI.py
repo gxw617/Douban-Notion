@@ -41,7 +41,8 @@ headers = {
     "accept": "application/json",
     "Notion-Version": "2022-06-28",
     "content-type": "application/json",
-    "authorization": notion_api
+     "authorization": "Bearer secret_OOGjqOU81FUS14Fbk3ZKMrvgaPFbKNa9CiXIvfmcDxi
+"
 }
 
 
